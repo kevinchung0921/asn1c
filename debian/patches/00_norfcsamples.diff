@@ -1,0 +1,12 @@
+diff -urNad asn1c-0.9.21.dfsg~/samples/Makefile.am asn1c-0.9.21.dfsg/samples/Makefile.am
+--- asn1c-0.9.21.dfsg~/samples/Makefile.am	2006-09-19 05:26:43.000000000 +0000
++++ asn1c-0.9.21.dfsg/samples/Makefile.am	2007-06-21 12:33:38.000000000 +0000
+@@ -14,7 +14,7 @@
+ ASN1_FILES_3 =				\
+ 	rfc4511-Lightweight-Directory-Access-Protocol-V3.asn1
+ 
+-all: $(ASN1_FILES_1) $(ASN1_FILES_2) $(ASN1_FILES_3)
++all:
+ 
+ $(ASN1_FILES_1): crfc2asn1.pl $(ASN1_SOURCE_1)
+ 	./crfc2asn1.pl $(ASN1_SOURCE_1)
