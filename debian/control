@@ -1,8 +1,8 @@
 Source: asn1c
 Section: devel
 Priority: optional
-Maintainer: W. Martin Borgert <debacle@debian.org>
-Uploaders: W. Martin Borgert <debacle@debian.org>, Michael Piefel <piefel@debian.org>
+Maintainer: Dennis Krzyzaniak <ebrosius@netgarage.org>
+Uploaders: W. Martin Borgert <debacle@debian.org>
 Build-Depends: debhelper (>= 4.0.0), cdbs, autotools-dev, automake1.9, libtool
 Standards-Version: 3.8.0
 Vcs-Browser: http://svn.debian.org/wsvn/collab-maint/deb-maint/asn1c/
