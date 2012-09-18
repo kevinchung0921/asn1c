@@ -1,6 +1,10 @@
-diff -urNad asn1c-0.9.21.dfsg~/samples/Makefile.am asn1c-0.9.21.dfsg/samples/Makefile.am
---- asn1c-0.9.21.dfsg~/samples/Makefile.am	2006-09-19 05:26:43.000000000 +0000
-+++ asn1c-0.9.21.dfsg/samples/Makefile.am	2007-06-21 12:33:38.000000000 +0000
+Description: Removed tests that used non-free IETF files.
+Author: W. Borgert <debacle@debacle.org>
+Last-Update: 2007-06-21
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/samples/Makefile.am
++++ b/samples/Makefile.am
 @@ -14,7 +14,7 @@
  ASN1_FILES_3 =				\
  	rfc4511-Lightweight-Directory-Access-Protocol-V3.asn1

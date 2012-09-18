@@ -1,0 +1,21 @@
+Description: Exclude pdf from build because of missing sources.
+Forwarded: not-needed
+Author: Eugene Seliverstov <theirix@gmail.com>
+Last-Update: 2012-09-05
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/doc/Makefile.am
++++ b/doc/Makefile.am
+@@ -1,10 +1,10 @@
+ 
+ docsdir = $(datadir)/doc/asn1c
+ 
+-docs_DATA =	$(srcdir)/*.pdf	\
++docs_DATA =	\
+ 		$(srcdir)/*.html
+ 
+-EXTRA_DIST =	$(srcdir)/*.pdf	\
++EXTRA_DIST = \
+ 		$(srcdir)/*.html
+ 
+ CLEANFILES = *.*~

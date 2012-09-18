@@ -1,0 +1,5 @@
+00_norfcsamples.diff
+01_hardening.diff
+02_asnctfail.diff
+03_nodebugoutcheck.diff
+04_nopdf.diff

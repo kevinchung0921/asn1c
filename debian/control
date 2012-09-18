@@ -1,19 +1,17 @@
 Source: asn1c
 Section: devel
-Priority: optional
-Maintainer: Dennis Krzyzaniak <ebrosius@netgarage.org>
-Uploaders: W. Martin Borgert <debacle@debian.org>
-Build-Depends: debhelper (>= 4.0.0), cdbs, autotools-dev, automake1.9, libtool
-Standards-Version: 3.8.0
-Vcs-Browser: http://svn.debian.org/wsvn/collab-maint/deb-maint/asn1c/
-Vcs-Svn: svn://svn.debian.org/collab-maint/deb-maint/asn1c/
-Homepage: http://asn1c.sourceforge.net/
+Priority: extra
+Maintainer: Eugene Seliverstov <theirix@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), autotools-dev, dh-autoreconf, libtool, m4, flex
+Standards-Version: 3.9.3
+Homepage: http://asn1c.sourceforge.net
+Vcs-Svn: svn://anonscm.debian.org/collab-maint/deb-maint/asn1c/trunk
+Vcs-Browser: http://anonscm.debian.org/viewvc/collab-maint/deb-maint/asn1c/trunk
 
 Package: asn1c
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: ASN.1 compiler for C
- This ASN.1 compiler turns the formal ASN.1 specifications
- into the C code.  The compiler is shipped together with
- conformant BER/DER/XER codecs.  The X.509 and GSM TAP3
- decoding examples are shipped as well.
+ This ASN.1 compiler turns the formal ASN.1 specifications into the C
+ code. The compiler is shipped together with conformant BER/DER/XER
+ codecs. The X.509 and GSM TAP3 decoding examples are shipped as well.

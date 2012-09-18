@@ -1,3 +1,12 @@
+asn1c (0.9.21.dfsg1-1) unstable; urgency=low
+
+  * Initial release (Closes: #686380)
+  * Re-adopted removed package asn1c (version 0.9.21.dsfg-4)
+  * Hardened sources and patched some Wformat-security errors
+  * Repackaged upstream tarball to exclude PDFs without sources
+
+ -- Eugene Seliverstov <theirix@gmail.com>  Mon, 03 Sep 2012 20:51:03 +0400
+
 asn1c (0.9.21.dfsg-4) unstable; urgency=low
 
   * Endorse NMU (closes: #472593).

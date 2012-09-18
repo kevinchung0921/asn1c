@@ -1,0 +1,14 @@
+asn1c for Debian
+----------------
+
+Package asn1c excludes RFC text files due to their non-free license. 
+If you intend to use examples, please extract them from the original
+upstream sources.
+
+Following files are removed:
+
+  samples/rfc4511.txt
+  samples/rfc3280.txt
+  samples/rfc3525.txt
+
+ -- Eugene Seliverstov <theirix@gmail.com>  Mon, 04 Sep 2012 20:00:00 +0400

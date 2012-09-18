@@ -1,0 +1,20 @@
+asn1c for Debian
+----------------
+
+Examples build is disabled because needed IETF text files 
+are removed from a package due to non-free license.
+
+PDF documentation is excluded because sources are missing.
+HTML documentation contains all information contained in PDFs.
+
+To build the package from source you need a repackaged DFSG tarball.
+It can be created from upstream sources by launching script:
+
+  debian/rules/get-orig-source
+
+The source package uses quilt for the modifications of the upstream source.
+Please consult with quilt documentation in
+
+	/usr/share/doc/quilt/README.source
+
+ -- Eugene Seliverstov <theirix@gmail.com>  Mon, 04 Sep 2012 20:00:00 +0400

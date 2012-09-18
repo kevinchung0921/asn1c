@@ -1,13 +1,45 @@
 #!/usr/bin/make -f
 
-include /usr/share/cdbs/1/rules/simple-patchsys.mk
-include /usr/share/cdbs/1/rules/debhelper.mk
-include /usr/share/cdbs/1/class/autotools.mk
+export DH_VERBOSE=1
 
-DEB_AUTO_UPDATE_AUTOMAKE:=1.9
+# Grab the version before dfsg
+DEB_DEBIAN_DIR=$(dir $(firstword $(MAKEFILE_LIST)))
+DEB_UPSTREAM_VERSION=$(shell dpkg-parsechangelog -l$(DEB_DEBIAN_DIR)/changelog \
+										 | sed -rne 's,^Version: ([^-]+)([.+]dfsg[^-]*)-.*,\1,p')
+DEB_DFSG_VERSION=$(shell dpkg-parsechangelog -l$(DEB_DEBIAN_DIR)/changelog \
+										 | sed -rne 's,^Version: ([^-]+)([.+]dfsg[^-]*)-.*,\2,p')
 
-binary-post-install/asn1c::
-	mv -f $(CURDIR)/debian/asn1c/usr/bin/*.pl \
-	    $(CURDIR)/debian/asn1c/usr/share/doc/asn1c/examples/
-	rm -f $(CURDIR)/debian/asn1c/usr/share/doc/asn1c/COPYING
+%:
+	dh $@ --with autoreconf
+
+override_dh_install:
+	dh_install
+	rm debian/asn1c/usr/bin/*.pl
+	rm debian/asn1c/usr/share/doc/asn1c/COPYING
+	rm debian/asn1c/usr/share/doc/asn1c/ChangeLog
+
+override_dh_auto_clean:
+	dh_auto_clean
+	-rm -rf asn1c/tests/test-check-*
+
+get-orig-source:
+	uscan --noconf --force-download --rename --download-current-version --destdir=. $(DEB_DEBIAN_DIR)/..
+	[ ! -d asn1c-$(DEB_UPSTREAM_VERSION)$(DEB_DFSG_VERSION) ] || \
+		(echo "Directory with unpacked target tarball already exists" ; exit 1)
+	rm -rf asn1c-$(DEB_UPSTREAM_VERSION)
+	tar -xf $(DEB_DEBIAN_DIR)/../asn1c_$(DEB_UPSTREAM_VERSION).orig.tar.gz
+	rm $(DEB_DEBIAN_DIR)/../asn1c_$(DEB_UPSTREAM_VERSION).orig.tar.gz
+	# remove IETF non-free RFC files
+	rm asn1c-$(DEB_UPSTREAM_VERSION)/samples/rfc3280.txt
+	rm asn1c-$(DEB_UPSTREAM_VERSION)/samples/rfc3525.txt
+	rm asn1c-$(DEB_UPSTREAM_VERSION)/samples/rfc4511.txt
+	# remove pdf documentation without sources
+	rm asn1c-$(DEB_UPSTREAM_VERSION)/doc/asn1c-quick.pdf
+	rm asn1c-$(DEB_UPSTREAM_VERSION)/doc/asn1c-usage.pdf
+	# repack sources with dfsg prefix
+	mv asn1c-$(DEB_UPSTREAM_VERSION) asn1c-$(DEB_UPSTREAM_VERSION)$(DEB_DFSG_VERSION)
+	GZIP=--best tar -cz --owner root --group root --mode a+rX \
+			 -f asn1c_$(DEB_UPSTREAM_VERSION)$(DEB_DFSG_VERSION).orig.tar.gz \
+			 asn1c-$(DEB_UPSTREAM_VERSION)$(DEB_DFSG_VERSION)
+	rm -r asn1c-$(DEB_UPSTREAM_VERSION)$(DEB_DFSG_VERSION)
 
