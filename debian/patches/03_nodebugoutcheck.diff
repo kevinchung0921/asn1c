@@ -17,3 +17,19 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  CFLAGS=\${COMMON_FLAGS} ${CFLAGS}
  CXXFLAGS=\${COMMON_FLAGS} ${CXXFLAGS}
  
+--- a/skeletons/tests/check-OCTET_STRING.c
++++ b/skeletons/tests/check-OCTET_STRING.c
+@@ -1,4 +1,4 @@
+-#define	EMIT_ASN_DEBUG	1
++#define	EMIT_ASN_DEBUG	0
+ #include <OCTET_STRING.c>
+ #include <BIT_STRING.c>
+ #include <xer_decoder.c>
+--- a/skeletons/tests/check-REAL.c
++++ b/skeletons/tests/check-REAL.c
+@@ -1,4 +1,4 @@
+-#define	EMIT_ASN_DEBUG	1
++#define	EMIT_ASN_DEBUG	0
+ #include <REAL.c>
+ #include <asn_codecs_prim.c>
+ #include <ber_decoder.c>

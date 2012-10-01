@@ -1,3 +1,10 @@
+asn1c (0.9.21.dfsg1-2) unstable; urgency=low
+
+  * Fixed failed test suite for 32-bit architectures.
+  * Fixed implicit declaration warning.
+
+ -- Eugene Seliverstov <theirix@gmail.com>  Tue, 02 Oct 2012 01:01:33 +0400
+
 asn1c (0.9.21.dfsg1-1) unstable; urgency=low
 
   * Initial release (Closes: #686380)
