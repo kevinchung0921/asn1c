@@ -6,3 +6,4 @@
 05_nooverflowtests.diff
 06_implicitdecl.diff
 07_asneeded.diff
+08_serialtests.patch

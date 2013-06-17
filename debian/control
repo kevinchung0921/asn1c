@@ -3,7 +3,7 @@ Section: devel
 Priority: extra
 Maintainer: Eugene Seliverstov <theirix@gmail.com>
 Build-Depends: debhelper (>= 9.0.0), autotools-dev, dh-autoreconf, libtool, m4, flex
-Standards-Version: 3.9.3
+Standards-Version: 3.9.4
 Homepage: http://asn1c.sourceforge.net
 Vcs-Svn: svn://anonscm.debian.org/collab-maint/deb-maint/asn1c/trunk
 Vcs-Browser: http://anonscm.debian.org/viewvc/collab-maint/deb-maint/asn1c/trunk
