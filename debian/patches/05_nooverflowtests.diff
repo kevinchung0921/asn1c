@@ -14,12 +14,12 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  
 -COMMON_FLAGS= -I. -DEMIT_ASN_DEBUG=0
 +COMMON_FLAGS= -I. -DEMIT_ASN_DEBUG=0 -DNO_OVERFLOW_TESTS
- CFLAGS=\${COMMON_FLAGS} ${CFLAGS}
- CXXFLAGS=\${COMMON_FLAGS} ${CXXFLAGS}
+ CFLAGS = \${COMMON_FLAGS} ${CFLAGS} -g -O0
+ CXXFLAGS = \${COMMON_FLAGS} ${CXXFLAGS}
  
 --- a/skeletons/tests/check-INTEGER.c
 +++ b/skeletons/tests/check-INTEGER.c
-@@ -173,9 +173,11 @@
+@@ -256,12 +256,14 @@
  		check_xer(-1, "<INTEGER>2147483649</INTEGER>", 0);
  		check_xer(-1, "<INTEGER>3147483649</INTEGER>", 0);
  		check_xer(-1, "<INTEGER>4147483649</INTEGER>", 0);
@@ -27,27 +27,31 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  		check_xer(-1, "<INTEGER>5147483649</INTEGER>", 0); /* special */
  		check_xer(-1, "<INTEGER>9147483649</INTEGER>", 0);
  		check_xer(-1, "<INTEGER>9999999999</INTEGER>", 0);
+ 		check_xer(-1, "<INTEGER>-5147483649</INTEGER>", 0);/* special */
+ 		check_xer(-1, "<INTEGER>-9147483649</INTEGER>", 0);
+ 		check_xer(-1, "<INTEGER>-9999999999</INTEGER>", 0);
 +#endif
  	}
- 
- 	return 0;
+ 	if(sizeof(long) == 8) {
+ 		check_xer(0, "<INTEGER>2147483648</INTEGER>", 2147483648);
 --- a/skeletons/tests/check-OIDs.c
 +++ b/skeletons/tests/check-OIDs.c
-@@ -405,12 +405,14 @@
+@@ -416,6 +416,7 @@
  	check_parse("1.2000000000.3", 3);
  	check_parse("1.2147483647.3", 3);
  	if(sizeof(long) == 4) {
 +#ifndef NO_OVERFLOW_TESTS
  		check_parse("1.2147483648.3", -1);	/* overflow on ILP32 */
+ 		check_parse("1.2147483649.3", -1);	/* overflow on ILP32 */
  		check_parse("1.3000000000.3", -1);
- 		check_parse("1.4000000000.3", -1);
+@@ -423,6 +424,7 @@
  		check_parse("1.5000000000.3", -1);
  		check_parse("1.6000000000.3", -1);
  		check_parse("1.9000000000.3", -1);
 +#endif
- 	} else {
+ 	} else if(sizeof(long) == 8) {
  		check_parse("1.2147483648.3", 3);
- 	}
+ 		check_parse("1.9223372036854775807.3", 3);
 --- a/skeletons/tests/Makefile.am
 +++ b/skeletons/tests/Makefile.am
 @@ -1,4 +1,4 @@

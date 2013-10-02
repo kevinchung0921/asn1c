@@ -1,9 +1,9 @@
 00_norfcsamples.diff
-01_hardening.diff
-02_asnctfail.diff
 03_nodebugoutcheck.diff
 04_nopdf.diff
 05_nooverflowtests.diff
 06_implicitdecl.diff
 07_asneeded.diff
 08_serialtests.patch
+09_automakewarns.patch
+10_makedoc.patch

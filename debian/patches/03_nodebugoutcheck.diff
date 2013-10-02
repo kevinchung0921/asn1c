@@ -14,22 +14,28 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  
 -COMMON_FLAGS= -I. -DEMIT_ASN_DEBUG
 +COMMON_FLAGS= -I. -DEMIT_ASN_DEBUG=0
- CFLAGS=\${COMMON_FLAGS} ${CFLAGS}
- CXXFLAGS=\${COMMON_FLAGS} ${CXXFLAGS}
+ CFLAGS = \${COMMON_FLAGS} ${CFLAGS} -g -O0
+ CXXFLAGS = \${COMMON_FLAGS} ${CXXFLAGS}
  
 --- a/skeletons/tests/check-OCTET_STRING.c
 +++ b/skeletons/tests/check-OCTET_STRING.c
-@@ -1,4 +1,4 @@
+@@ -3,7 +3,7 @@
+ #include <time.h>
+ #include <sys/time.h>
+ 
 -#define	EMIT_ASN_DEBUG	1
 +#define	EMIT_ASN_DEBUG	0
- #include <OCTET_STRING.c>
- #include <BIT_STRING.c>
- #include <xer_decoder.c>
+ #include <OCTET_STRING.h>
+ #include <BIT_STRING.h>
+ 
 --- a/skeletons/tests/check-REAL.c
 +++ b/skeletons/tests/check-REAL.c
-@@ -1,4 +1,4 @@
+@@ -2,7 +2,7 @@
+ #include <assert.h>
+ #include <math.h>
+ 
 -#define	EMIT_ASN_DEBUG	1
 +#define	EMIT_ASN_DEBUG	0
- #include <REAL.c>
- #include <asn_codecs_prim.c>
- #include <ber_decoder.c>
+ #include <REAL.h>
+ 
+ static char reconstructed[2][512];

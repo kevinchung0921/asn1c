@@ -21,6 +21,8 @@ override_dh_install:
 override_dh_auto_clean:
 	dh_auto_clean
 	-rm -rf asn1c/tests/test-check-*
+	-rm -f doc/docsrc/*.pdf
+	-rm -f doc/docsrc/asn1c-usage.xdv
 
 get-orig-source:
 	uscan --noconf --force-download --rename --download-current-version --destdir=. $(DEB_DEBIAN_DIR)/..
@@ -30,9 +32,9 @@ get-orig-source:
 	tar -xf $(DEB_DEBIAN_DIR)/../asn1c_$(DEB_UPSTREAM_VERSION).orig.tar.gz
 	rm $(DEB_DEBIAN_DIR)/../asn1c_$(DEB_UPSTREAM_VERSION).orig.tar.gz
 	# remove IETF non-free RFC files
-	rm asn1c-$(DEB_UPSTREAM_VERSION)/samples/rfc3280.txt
-	rm asn1c-$(DEB_UPSTREAM_VERSION)/samples/rfc3525.txt
-	rm asn1c-$(DEB_UPSTREAM_VERSION)/samples/rfc4511.txt
+	rm asn1c-$(DEB_UPSTREAM_VERSION)/examples/rfc3280.txt
+	rm asn1c-$(DEB_UPSTREAM_VERSION)/examples/rfc3525.txt
+	rm asn1c-$(DEB_UPSTREAM_VERSION)/examples/rfc4511.txt
 	# remove pdf documentation without sources
 	rm asn1c-$(DEB_UPSTREAM_VERSION)/doc/asn1c-quick.pdf
 	rm asn1c-$(DEB_UPSTREAM_VERSION)/doc/asn1c-usage.pdf

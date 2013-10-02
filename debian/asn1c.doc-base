@@ -4,6 +4,5 @@ Author: Lev Walkin <vlm@lionet.info>
 Abstract: ASN.1 C Compiler Manual
 Section: Programming/C
 
-Format: HTML
-Index: /usr/share/doc/asn1c/asn1c-usage.html
-Files: /usr/share/doc/asn1c/asn1c-usage.html
+Format: PDF
+Files: /usr/share/doc/asn1c/asn1c-usage.pdf.gz

@@ -1,3 +1,13 @@
+asn1c (0.9.24+dfsg-1) unstable; urgency=low
+
+  * New upstream release
+  * Add build-depends to automake >= 1.12
+  * Changed DFSG naming to '+dfsg' instead of '.dfsg'
+  * Enabled Multi-Arch: foreign
+  * Build asn1c-usage PDF from sources
+
+ -- Eugene Seliverstov <theirix@gmail.com>  Thu, 03 Oct 2013 00:00:00 +0400
+
 asn1c (0.9.21.dfsg1-4) unstable; urgency=low
 
   * Fix FTBFS with automake 1.12 or later. (Closes: #712548)

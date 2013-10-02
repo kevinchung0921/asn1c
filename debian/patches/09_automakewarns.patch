@@ -1,0 +1,30 @@
+Description: Fixed automake warnings, enabled AM_PROG_AR.
+Author: Eugene Seliverstov <theirix@gmail.com>
+Last-Update: 2013-06-17
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/configure.ac
++++ b/configure.ac
+@@ -1,10 +1,8 @@
+ AC_INIT([asn1c], [0.9.24], [vlm@lionet.info])
+-AM_INIT_AUTOMAKE([-Wall -Werror foreign serial-tests])
++AM_INIT_AUTOMAKE([-Wall -Werror foreign serial-tests 1.12])
+ AC_CONFIG_HEADER([config.h])
+ AC_CONFIG_MACRO_DIR([m4])
+ 
+-AM_PROG_LIBTOOL
+-
+ dnl Checks for programs.
+ AC_PROG_CC
+ AC_PROG_CPP
+@@ -13,7 +11,9 @@
+ AC_PROG_MAKE_SET
+ AC_PROG_YACC
+ AM_PROG_LEX
+-AC_PATH_PROG(AR, ar, ar, $PATH:/usr/ucb:/usr/ccs/bin)	dnl for Solaris
++m4_ifdef([AM_PROG_AR], [AM_PROG_AR])
++
++AM_PROG_LIBTOOL
+ 
+ case "$host_os" in
+ cygwin)
