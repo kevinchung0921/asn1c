@@ -1,6 +1,6 @@
-Description: Enable PDF build from sources.
+Description: Build PDF documentation with standard fonts.
 Author: Eugene Seliverstov <theirix@gmail.com>
-Last-Update: 2013-06-17
+Last-Update: 2013-10-07
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 --- a/doc/docsrc/asn1c-usage.tex
@@ -15,14 +15,3 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  
  \usepackage{fancyhdr}
  \pagestyle{fancy}
---- a/doc/docsrc/Makefile.am
-+++ b/doc/docsrc/Makefile.am
-@@ -2,6 +2,8 @@
- XELATEX_FLAGS = -halt-on-error -file-line-error
- XELATEX = xelatex
- 
-+all: regen
-+
- regen:
- 	$(XELATEX) $(XELATEX_FLAGS) -no-pdf asn1c-usage
- 	$(XELATEX) $(XELATEX_FLAGS) -no-pdf asn1c-usage

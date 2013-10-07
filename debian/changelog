@@ -1,12 +1,13 @@
 asn1c (0.9.24+dfsg-1) unstable; urgency=low
 
   * New upstream release
-  * Add build-depends to automake >= 1.12
   * Changed DFSG naming to '+dfsg' instead of '.dfsg'
-  * Enabled Multi-Arch: foreign
-  * Build asn1c-usage PDF from sources
+  * Build asn1c-usage PDF from sources and use 
+    standard packaged fonts (patch 10_fixdocfont)
+  * Fix warnings for automake (patch 09_automakewarns)
+  * Drop patches 01_hardening, 02_asnctfail as they are fixed in upstream
 
- -- Eugene Seliverstov <theirix@gmail.com>  Thu, 03 Oct 2013 00:00:00 +0400
+ -- Eugene Seliverstov <theirix@gmail.com>  Mon, 07 Oct 2013 18:00:00 +0400
 
 asn1c (0.9.21.dfsg1-4) unstable; urgency=low
 

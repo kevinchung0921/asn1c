@@ -24,6 +24,10 @@ override_dh_auto_clean:
 	-rm -f doc/docsrc/*.pdf
 	-rm -f doc/docsrc/asn1c-usage.xdv
 
+override_dh_auto_build:
+	dh_auto_build
+	$(MAKE) -C doc/docsrc regen
+
 get-orig-source:
 	uscan --noconf --force-download --rename --download-current-version --destdir=. $(DEB_DEBIAN_DIR)/..
 	[ ! -d asn1c-$(DEB_UPSTREAM_VERSION)$(DEB_DFSG_VERSION) ] || \

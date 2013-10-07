@@ -6,4 +6,4 @@
 07_asneeded.diff
 08_serialtests.patch
 09_automakewarns.patch
-10_makedoc.patch
+10_fixdocfont.patch
