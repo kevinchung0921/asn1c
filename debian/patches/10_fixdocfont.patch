@@ -5,13 +5,29 @@ Last-Update: 2013-10-07
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 --- a/doc/docsrc/asn1c-usage.tex
 +++ b/doc/docsrc/asn1c-usage.tex
-@@ -6,9 +6,6 @@
- \usepackage[hmargin={1in,1in},vmargin={2in,2in}]{geometry}
+@@ -7,9 +7,9 @@
+ \usepackage[hmargin={1in,1in},vmargin={1.5in,1.5in}]{geometry}
  
  \defaultfontfeatures{Mapping=tex-text}
--\setmainfont{Myriad Pro}
--\setsansfont{Myriad Pro}
+-\setmainfont{PT Sans}
+-\setsansfont{PT Sans}
 -\setmonofont{Consolas}
++\setmainfont{Latin Modern Sans}
++\setsansfont{Latin Modern Sans}
++\setmonofont{Latin Modern Mono}
  
  \usepackage{fancyhdr}
- \pagestyle{fancy}
+ \usepackage{longtable}
+@@ -26,10 +26,10 @@
+ \setstretch{1.1}
+ 
+ % Courier 10 Pitch
+-\def\courierFont{Courier10 BT WGL4}
++\def\courierFont{Latin Modern Mono}
+ %\def\courierFont{Consolas}
+ \setmonofont[Scale=1.05]{\courierFont}
+-\setmathfont[Scale=1.05]{Cambria Math}
++\setmathfont[Scale=1.05]{Latin Modern Math}
+ 
+ 
+ \makeatletter

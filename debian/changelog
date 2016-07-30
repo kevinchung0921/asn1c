@@ -1,3 +1,14 @@
+asn1c (0.9.27+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+  * Updated policy version to 3.9.8
+  * Drop patches 03_nodebugoutcheck, 05_nooverflowtests, 06_implicitdecl,
+    07_asneeded as they are fixed in upstream
+  * Changed watch to new upstream home
+  * Changed fonts for the generated PDF documentation
+
+ -- Eugene Seliverstov <theirix@gmail.com>  Sat, 30 Jul 2016 19:36:55 +0300
+
 asn1c (0.9.24+dfsg-1) unstable; urgency=low
 
   * New upstream release

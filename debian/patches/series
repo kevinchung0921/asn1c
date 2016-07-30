@@ -1,9 +1,5 @@
 00_norfcsamples.diff
-03_nodebugoutcheck.diff
 04_nopdf.diff
-05_nooverflowtests.diff
-06_implicitdecl.diff
-07_asneeded.diff
 08_serialtests.patch
 09_automakewarns.patch
 10_fixdocfont.patch

@@ -9,8 +9,8 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  ASN1_FILES_3 =				\
  	rfc4511-Lightweight-Directory-Access-Protocol-V3.asn1
  
--all: $(ASN1_FILES_1) $(ASN1_FILES_2) $(ASN1_FILES_3)
-+all:
+-BUILT_SOURCES = $(ASN1_FILES_1) $(ASN1_FILES_2) $(ASN1_FILES_3)
++BUILT_SOURCES =
  
  $(ASN1_FILES_1): crfc2asn1.pl $(ASN1_SOURCE_1)
- 	./crfc2asn1.pl $(ASN1_SOURCE_1)
+ 	${srcdir}/crfc2asn1.pl ${srcdir}/$(ASN1_SOURCE_1)
