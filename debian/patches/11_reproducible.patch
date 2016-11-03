@@ -1,0 +1,15 @@
+Description: Fixed reproducible build.
+Author: Eugene Seliverstov <theirix@gmail.com>
+Last-Update: 2016-11-04
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/doc/docsrc/asn1c-usage.tex
++++ b/doc/docsrc/asn1c-usage.tex
+@@ -99,6 +99,7 @@
+ 
+ \title{Using the Open Source ASN.1 Compiler}
+ \author{Lev Walkin <\href{mailto:vlm@lionet.info?Subject=asn1c}{vlm@lionet.info}>}
++\date{}
+ 
+ \pagestyle{fancy}
+ \fancyhead[L]{\leftmark}

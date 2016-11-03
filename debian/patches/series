@@ -1,5 +1,7 @@
 00_norfcsamples.diff
 04_nopdf.diff
+05_installpdf.patch
 08_serialtests.patch
 09_automakewarns.patch
 10_fixdocfont.patch
+11_reproducible.patch

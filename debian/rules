@@ -12,11 +12,11 @@ DEB_DFSG_VERSION=$(shell dpkg-parsechangelog -l$(DEB_DEBIAN_DIR)/changelog \
 %:
 	dh $@ --with autoreconf
 
-override_dh_install:
-	dh_install
-	rm debian/asn1c/usr/bin/*.pl
-	rm debian/asn1c/usr/share/doc/asn1c/COPYING
-	rm debian/asn1c/usr/share/doc/asn1c/ChangeLog
+override_dh_auto_install:
+	dh_auto_install
+	rm debian/tmp/usr/bin/*.pl
+	rm debian/tmp/usr/share/doc/asn1c/COPYING
+	rm debian/tmp/usr/share/doc/asn1c/ChangeLog
 
 override_dh_auto_clean:
 	dh_auto_clean
@@ -24,8 +24,7 @@ override_dh_auto_clean:
 	-rm -f doc/docsrc/*.pdf
 	-rm -f doc/docsrc/asn1c-usage.xdv
 
-override_dh_auto_build:
-	dh_auto_build
+override_dh_auto_build-indep:
 	$(MAKE) -C doc/docsrc regen
 
 get-orig-source:

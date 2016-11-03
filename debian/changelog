@@ -1,3 +1,12 @@
+asn1c (0.9.27+dfsg-2) UNRELEASED; urgency=medium
+
+  * Split package to binary asn1c and architecture-independent asn1c-doc 
+  * Install docs only at non-MIPS architectures (05_installpdf, #836454)
+  * Fixed reproducible build (11_reproducible)
+  * Excluded examples directory because it did not contain meaningful examples
+
+ -- Eugene Seliverstov <theirix@gmail.com>  Thu, 03 Nov 2016 15:02:52 +0300
+
 asn1c (0.9.27+dfsg-1) unstable; urgency=medium
 
   * New upstream release
