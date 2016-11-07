@@ -1,3 +1,11 @@
+asn1c (0.9.27+dfsg-3) unstable; urgency=medium
+
+  * Fixed FTBFS: docs install with arch/indep build (closes: #843481)
+  * Fixed FTBFS: missing texlive-luatex build depend for reproducible build
+  * Fixed mistypes at binary, manpage
+
+ -- Eugene Seliverstov <theirix@gmail.com>  Sun, 07 Nov 2016 23:51:31 +0300
+
 asn1c (0.9.27+dfsg-2) unstable; urgency=medium
 
   * Split package to binary asn1c and architecture-independent asn1c-doc 

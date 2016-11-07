@@ -1,0 +1,38 @@
+Description: Fixed a mistype.
+Author: Eugene Seliverstov <theirix@gmail.com>
+Last-Update: 2016-11-07
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/libasn1parser/asn1p_l.c
++++ b/libasn1parser/asn1p_l.c
+@@ -2603,7 +2603,7 @@
+ #line 150 "asn1p_l.l"
+ {
+ 			fprintf(stderr,
+-				"ASN.1 Parser syncronization failure: "
++				"ASN.1 Parser synchronization failure: "
+ 				"\"%s\" at line %d must not appear "
+ 				"inside value definition\n",
+ 				asn1p_text, asn1p_lineno);
+--- a/libasn1parser/asn1p_l.l
++++ b/libasn1parser/asn1p_l.l
+@@ -149,7 +149,7 @@
+ 
+ 	"::="	{
+ 			fprintf(stderr,
+-				"ASN.1 Parser syncronization failure: "
++				"ASN.1 Parser synchronization failure: "
+ 				"\"%s\" at line %d must not appear "
+ 				"inside value definition\n",
+ 				yytext, yylineno);
+--- a/asn1c/enber.1
++++ b/asn1c/enber.1
+@@ -33,7 +33,7 @@
+ A hash "\fB#\fR" or two dashes "\fB--\fR" following a whitespace is treated as a beginning of a comment line, which is ignored completely.
+ Empty lines are ignored as well.
+ .P
+-The following example demostrates the use of comments:
++The following example demonstrates the use of comments:
+ .Vb
+ \&	<C O="0" T="[1]" TL="2" V="2">
+ \&		<I O="2" T="[1]" TL="2" V="Indefinite">

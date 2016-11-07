@@ -3,7 +3,7 @@ Section: devel
 Priority: extra
 Maintainer: Eugene Seliverstov <theirix@gmail.com>
 Build-Depends: debhelper (>= 9.0.0), autotools-dev, dh-autoreconf, automake, libtool, m4, flex
-Build-Depends-Indep: texlive, texlive-xetex, texlive-fonts-extra, texlive-math-extra, lmodern
+Build-Depends-Indep: texlive, texlive-xetex, texlive-luatex, texlive-fonts-extra, texlive-math-extra, lmodern
 Standards-Version: 3.9.8
 Homepage: https://github.com/vlm/asn1c
 Vcs-Svn: svn://anonscm.debian.org/collab-maint/deb-maint/asn1c/trunk

@@ -12,20 +12,30 @@ DEB_DFSG_VERSION=$(shell dpkg-parsechangelog -l$(DEB_DEBIAN_DIR)/changelog \
 %:
 	dh $@ --with autoreconf
 
-override_dh_auto_install:
-	dh_auto_install
-	rm debian/tmp/usr/bin/*.pl
-	rm debian/tmp/usr/share/doc/asn1c/COPYING
-	rm debian/tmp/usr/share/doc/asn1c/ChangeLog
-
 override_dh_auto_clean:
 	dh_auto_clean
 	-rm -rf asn1c/tests/test-check-*
 	-rm -f doc/docsrc/*.pdf
 	-rm -f doc/docsrc/asn1c-usage.xdv
 
+# Regenerate documentation only for asn1c-doc architecture-independent build
 override_dh_auto_build-indep:
 	$(MAKE) -C doc/docsrc regen
+
+override_dh_auto_install-indep:
+	dh_auto_install --indep
+	# copy documentation from source directory because it is not installed by default
+	mkdir -p debian/tmp/usr/share/doc/asn1c-doc/
+	cp -v doc/docsrc/*.pdf debian/tmp/usr/share/doc/asn1c-doc/
+	rm -f debian/tmp/usr/bin/*.pl
+	rm -f debian/tmp/usr/share/doc/asn1c/COPYING
+	rm -f debian/tmp/usr/share/doc/asn1c/ChangeLog
+
+override_dh_auto_install-arch:
+	dh_auto_install --arch
+	rm -f debian/tmp/usr/bin/*.pl
+	rm -f debian/tmp/usr/share/doc/asn1c/COPYING
+	rm -f debian/tmp/usr/share/doc/asn1c/ChangeLog
 
 get-orig-source:
 	uscan --noconf --force-download --rename --download-current-version --destdir=. $(DEB_DEBIAN_DIR)/..
