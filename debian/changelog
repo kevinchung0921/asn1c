@@ -4,7 +4,7 @@ asn1c (0.9.27+dfsg-3) unstable; urgency=medium
   * Fixed FTBFS: missing texlive-luatex build depend for reproducible build
   * Fixed mistypes at binary, manpage
 
- -- Eugene Seliverstov <theirix@gmail.com>  Sun, 07 Nov 2016 23:51:31 +0300
+ -- Eugene Seliverstov <theirix@gmail.com>  Mon, 07 Nov 2016 23:51:31 +0300
 
 asn1c (0.9.27+dfsg-2) unstable; urgency=medium
 
