@@ -12,7 +12,7 @@ Vcs-Browser: https://anonscm.debian.org/viewvc/collab-maint/deb-maint/asn1c/trun
 Package: asn1c
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Recommends: ans1c-doc
+Recommends: ans1c-doc (>= 0.9.27+dfsg-2)
 Description: ASN.1 compiler for C
  This ASN.1 compiler turns the formal ASN.1 specifications into the C
  code. The compiler is shipped together with conformant BER/DER/XER
@@ -21,8 +21,11 @@ Description: ASN.1 compiler for C
 Package: asn1c-doc
 Section: doc
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: ASN.1 compiler for C
+Multi-Arch: foreign
+Depends: ${misc:Depends}
+Replaces: asn1c (<< 0.9.27+dfsg-2)
+Breaks: asn1c (<< 0.9.27+dfsg-2)
+Description: Documentation for asn1c
  This ASN.1 compiler turns the formal ASN.1 specifications into the C
  code. The compiler is shipped together with conformant BER/DER/XER
  codecs. The X.509 and GSM TAP3 decoding examples are shipped as well.

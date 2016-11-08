@@ -1,3 +1,11 @@
+asn1c (0.9.27+dfsg-4) unstable; urgency=medium
+
+  * Fixed upgrading from monolith package (closes: #843675)
+  * Adjusted short description for asn1c-doc
+  * Adjusted Depends and Multi-Arch for asn1c-doc package
+
+ -- Eugene Seliverstov <theirix@gmail.com>  Tue, 08 Nov 2016 21:47:19 +0300
+
 asn1c (0.9.27+dfsg-3) unstable; urgency=medium
 
   * Fixed FTBFS: docs install with arch/indep build (closes: #843481)
