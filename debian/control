@@ -12,7 +12,7 @@ Vcs-Browser: https://anonscm.debian.org/viewvc/collab-maint/deb-maint/asn1c/trun
 Package: asn1c
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Recommends: ans1c-doc (>= 0.9.27+dfsg-2)
+Recommends: asn1c-doc (>= 0.9.27+dfsg-2)
 Description: ASN.1 compiler for C
  This ASN.1 compiler turns the formal ASN.1 specifications into the C
  code. The compiler is shipped together with conformant BER/DER/XER
