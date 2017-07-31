@@ -1,3 +1,13 @@
+asn1c (0.9.28+dfsg-1) unstable; urgency=medium
+
+  * Fixed dependency on texlive-math-extra (closes: #867065)
+  * New upstream release 0.9.28
+  * Updated policy version to 4.0.0
+  * Removed obsolete patch 13_manmacro
+  * Updated patches to fulfil build scripts
+
+ -- Eugene Seliverstov <theirix@gmail.com>  Mon, 31 Jul 2017 20:20:00 +0300
+
 asn1c (0.9.27+dfsg-5) unstable; urgency=medium
 
   * Fixed Recommends field

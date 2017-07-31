@@ -5,7 +5,7 @@ Last-Update: 2013-10-07
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 --- a/doc/docsrc/asn1c-usage.tex
 +++ b/doc/docsrc/asn1c-usage.tex
-@@ -7,9 +7,9 @@
+@@ -8,9 +8,9 @@
  \usepackage[hmargin={1in,1in},vmargin={1.5in,1.5in}]{geometry}
  
  \defaultfontfeatures{Mapping=tex-text}
@@ -18,7 +18,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  
  \usepackage{fancyhdr}
  \usepackage{longtable}
-@@ -26,10 +26,10 @@
+@@ -27,10 +27,10 @@
  \setstretch{1.1}
  
  % Courier 10 Pitch

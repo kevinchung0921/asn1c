@@ -25,14 +25,14 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  				"\"%s\" at line %d must not appear "
  				"inside value definition\n",
  				yytext, yylineno);
---- a/asn1c/enber.1
-+++ b/asn1c/enber.1
-@@ -33,7 +33,7 @@
- A hash "\fB#\fR" or two dashes "\fB--\fR" following a whitespace is treated as a beginning of a comment line, which is ignored completely.
+--- a/doc/man/enber.1
++++ b/doc/man/enber.1
+@@ -39,7 +39,7 @@
+ completely.
  Empty lines are ignored as well.
- .P
--The following example demostrates the use of comments:
-+The following example demonstrates the use of comments:
- .Vb
- \&	<C O="0" T="[1]" TL="2" V="2">
- \&		<I O="2" T="[1]" TL="2" V="Indefinite">
+ .PP
+-The following example \f[C]enber\f[](1) input demostrates the use of
++The following example \f[C]enber\f[](1) input demonstrates the use of
+ comments:
+ .PP
+ <C O="0" T="[1]" TL="2" V="2">

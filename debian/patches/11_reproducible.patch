@@ -5,9 +5,9 @@ Last-Update: 2016-11-04
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 --- a/doc/docsrc/asn1c-usage.tex
 +++ b/doc/docsrc/asn1c-usage.tex
-@@ -99,6 +99,7 @@
- 
- \title{Using the Open Source ASN.1 Compiler}
+@@ -102,6 +102,7 @@
+ \vspace*{0.4cm}
+ \Large Documentation for asn1c version \asnver{}}
  \author{Lev Walkin <\href{mailto:vlm@lionet.info?Subject=asn1c}{vlm@lionet.info}>}
 +\date{}
  
