@@ -10,7 +10,7 @@ DEB_DFSG_VERSION=$(shell dpkg-parsechangelog -l$(DEB_DEBIAN_DIR)/changelog \
 										 | sed -rne 's,^Version: ([^-]+)([.+]dfsg[^-]*)-.*,\2,p')
 
 %:
-	dh $@ --with autoreconf
+	dh $@
 
 override_dh_auto_clean:
 	dh_auto_clean
