@@ -6,8 +6,8 @@ Build-Depends: debhelper (>= 10.0.0), flex
 Build-Depends-Indep: texlive, texlive-xetex, texlive-luatex, texlive-fonts-extra, texlive-science, lmodern
 Standards-Version: 4.1.0
 Homepage: https://github.com/vlm/asn1c
-Vcs-Svn: svn://anonscm.debian.org/collab-maint/deb-maint/asn1c/trunk
-Vcs-Browser: https://anonscm.debian.org/viewvc/collab-maint/deb-maint/asn1c/trunk
+Vcs-Git: https://salsa.debian.org/theirix-guest/asn1c.git
+Vcs-Browser: https://salsa.debian.org/theirix-guest/asn1c
 
 Package: asn1c
 Architecture: any
