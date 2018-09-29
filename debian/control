@@ -1,6 +1,6 @@
 Source: asn1c
 Section: devel
-Priority: extra
+Priority: optional
 Maintainer: Eugene Seliverstov <theirix@gmail.com>
 Build-Depends: debhelper (>= 10.0.0), flex
 Build-Depends-Indep: texlive, texlive-xetex, texlive-luatex, texlive-fonts-extra, texlive-science, lmodern
