@@ -1,4 +1,4 @@
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: ASN.1 Compiler
 Upstream-Author: Lev Walkin <vlm@lionet.info>
 Source: https://github.com/vlm/asn1c
