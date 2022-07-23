@@ -1,6 +1,10 @@
 # watch control file for uscan
 #https://github.com/vlm/asn1c/archive/v(.+).tar.gz debian uupdate
-version=3
-opts="dversionmangle=s/[\+\.]dfsg\d*//,filenamemangle=s/(?:.*)?v?(\d[\d\.]*)\.tar\.gz/asn1c-$1.tar.gz/" \
-			 https://github.com/vlm/asn1c/releases (?:.*/)?v?(\d[\d\.]*)\.tar\.gz
+version=4
+opts=\
+repacksuffix=+dfsg,\
+repack,compression=gz,\
+dversionmangle=s/[\+\.]dfsg\d*//,\
+filenamemangle=s/(?:.*)?v(\d[\d\.]*)\.tar\.gz/asn1c-$1.tar.gz/ \
+ https://github.com/vlm/asn1c/releases (?:.*/)?v?(\d[\d\.]*)\.tar\.gz
 

@@ -2,13 +2,6 @@
 
 export DH_VERBOSE=1
 
-# Grab the version before dfsg
-DEB_DEBIAN_DIR=$(dir $(firstword $(MAKEFILE_LIST)))
-DEB_UPSTREAM_VERSION=$(shell dpkg-parsechangelog -l$(DEB_DEBIAN_DIR)/changelog \
-										 | sed -rne 's,^Version: ([^-]+)([.+]dfsg[^-]*)-.*,\1,p')
-DEB_DFSG_VERSION=$(shell dpkg-parsechangelog -l$(DEB_DEBIAN_DIR)/changelog \
-										 | sed -rne 's,^Version: ([^-]+)([.+]dfsg[^-]*)-.*,\2,p')
-
 %:
 	dh $@
 
@@ -36,25 +29,3 @@ override_dh_auto_install-arch:
 	rm -f debian/tmp/usr/bin/*.pl
 	rm -f debian/tmp/usr/share/doc/asn1c/COPYING
 	rm -f debian/tmp/usr/share/doc/asn1c/ChangeLog
-
-get-orig-source:
-	uscan --noconf --force-download --rename --download-current-version --destdir=. $(DEB_DEBIAN_DIR)/..
-	[ ! -d asn1c-$(DEB_UPSTREAM_VERSION)$(DEB_DFSG_VERSION) ] || \
-		(echo "Directory with unpacked target tarball already exists" ; exit 1)
-	rm -rf asn1c-$(DEB_UPSTREAM_VERSION)
-	tar -xf $(DEB_DEBIAN_DIR)/../asn1c_$(DEB_UPSTREAM_VERSION).orig.tar.gz
-	rm $(DEB_DEBIAN_DIR)/../asn1c_$(DEB_UPSTREAM_VERSION).orig.tar.gz
-	# remove IETF non-free RFC files
-	rm asn1c-$(DEB_UPSTREAM_VERSION)/examples/rfc3280.txt
-	rm asn1c-$(DEB_UPSTREAM_VERSION)/examples/rfc3525.txt
-	rm asn1c-$(DEB_UPSTREAM_VERSION)/examples/rfc4511.txt
-	# remove pdf documentation without sources
-	rm asn1c-$(DEB_UPSTREAM_VERSION)/doc/asn1c-quick.pdf
-	rm asn1c-$(DEB_UPSTREAM_VERSION)/doc/asn1c-usage.pdf
-	# repack sources with dfsg prefix
-	mv asn1c-$(DEB_UPSTREAM_VERSION) asn1c-$(DEB_UPSTREAM_VERSION)$(DEB_DFSG_VERSION)
-	GZIP=--best tar -cz --owner root --group root --mode a+rX \
-			 -f asn1c_$(DEB_UPSTREAM_VERSION)$(DEB_DFSG_VERSION).orig.tar.gz \
-			 asn1c-$(DEB_UPSTREAM_VERSION)$(DEB_DFSG_VERSION)
-	rm -r asn1c-$(DEB_UPSTREAM_VERSION)$(DEB_DFSG_VERSION)
-
