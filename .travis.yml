@@ -1,0 +1,10 @@
+language: c
+compiler:
+  - gcc
+  - clang
+script:
+    - autoreconf -iv
+    - ./configure --enable-Werror
+    - make -j8
+    - make check
+    - make distcheck
