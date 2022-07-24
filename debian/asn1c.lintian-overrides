@@ -1,0 +1,4 @@
+# These README files describe contents of the asn1c directory with data files and
+# do not belong to documentation
+asn1c: package-contains-documentation-outside-usr-share-doc [usr/share/asn1c/README]
+asn1c: package-contains-documentation-outside-usr-share-doc [usr/share/asn1c/standard-modules/README]
