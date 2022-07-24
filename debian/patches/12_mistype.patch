@@ -1,6 +1,7 @@
 Description: Fixed a mistype.
 Author: Eugene Seliverstov <theirix@gmail.com>
 Last-Update: 2016-11-07
+Forwarded: https://github.com/vlm/asn1c/pull/110
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 --- a/libasn1parser/asn1p_l.c

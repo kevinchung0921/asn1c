@@ -3,6 +3,7 @@ Date: Sat, 23 Jul 2022 23:19:29 +0300
 Subject: Fix FTBFS with undefined behaviour on GCC 12
 
 Upstream: https://github.com/vlm/asn1c/commit/beedbdeb6ed0c90e8b051bc03f02739a486cad7b
+Forwarded: not-needed
 Author: Lev Walkin <vlm@lionet.info>
 Bug-Debian: http://bugs.debian.org/1012896
 Last-Update: 2012-07-23

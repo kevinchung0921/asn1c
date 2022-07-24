@@ -1,5 +1,6 @@
 Description: Fixed reproducible build.
 Author: Eugene Seliverstov <theirix@gmail.com>
+Forwarded: not-needed
 Last-Update: 2016-11-04
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/

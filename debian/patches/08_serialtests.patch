@@ -2,6 +2,7 @@ Description: fix FTBFS with automake 1.12 or later.
  Declared tests as serial because default behaviour is 
  parallel test harness.
 Bug-Debian: http://bugs.debian.org/712548
+Forwarded: not-needed
 Author: Eugene Seliverstov <theirix@gmail.com>
 Last-Update: 2013-06-17
 ---

@@ -1,6 +1,7 @@
 Description: Fixed automake warnings, enabled AM_PROG_AR.
 Author: Eugene Seliverstov <theirix@gmail.com>
 Last-Update: 2013-06-17
+Forwarded: https://github.com/vlm/asn1c/pull/109
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 --- a/configure.ac
