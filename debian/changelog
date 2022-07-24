@@ -47,7 +47,7 @@ asn1c (0.9.27+dfsg-3) unstable; urgency=medium
 
 asn1c (0.9.27+dfsg-2) unstable; urgency=medium
 
-  * Split package to binary asn1c and architecture-independent asn1c-doc 
+  * Split package to binary asn1c and architecture-independent asn1c-doc
   * Install docs only at non-MIPS architectures (05_installpdf, #836454)
   * Fixed reproducible build (11_reproducible)
   * Excluded examples directory because it did not contain meaningful examples
@@ -69,7 +69,7 @@ asn1c (0.9.24+dfsg-1) unstable; urgency=low
 
   * New upstream release
   * Changed DFSG naming to '+dfsg' instead of '.dfsg'
-  * Build asn1c-usage PDF from sources and use 
+  * Build asn1c-usage PDF from sources and use
     standard packaged fonts (patch 10_fixdocfont)
   * Fix warnings for automake (patch 09_automakewarns)
   * Drop patches 01_hardening, 02_asnctfail as they are fixed in upstream
