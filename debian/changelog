@@ -1,3 +1,9 @@
+asn1c (0.9.28+dfsg-4) UNRELEASED; urgency=medium
+
+  * Bump version UNRELEASED
+
+ -- Eugene Seliverstov <theirix@gmail.com>  Mon, 25 Jul 2022 14:14:10 +0300
+
 asn1c (0.9.28+dfsg-3) unstable; urgency=medium
 
    Moved to git and salsa
