@@ -2,10 +2,15 @@ Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: ASN.1 Compiler
 Upstream-Author: Lev Walkin <vlm@lionet.info>
 Source: https://github.com/vlm/asn1c
-Disclaimer: The IETF documents rfc3280.txt, rfc3525.txt, and
- rfc4511.txt have been removed by Debian from asn1c-0.9.21/samples/
- due to their non-free license. If you need them, e.g. to build the
- samples, get the original source from the address above.
+Files-Excluded:
+  examples/rfc3280.txt
+  examples/rfc3525.txt
+  examples/rfc4511.txt
+  doc/asn1c-quick.pdf
+  doc/asn1c-usage.pdf
+Comment: The following files were removed because:
+  rfc3280.txt, rfc3525.txt, rfc4511.txt - IETF non-free RFC files;
+  asn1c-quick.pdf, asn1c-usage.pdf - PDF documentation without sources.
 
 Files: *
 Copyright: (c) 2003-2014 Lev Walkin <vlm@lionet.info>
