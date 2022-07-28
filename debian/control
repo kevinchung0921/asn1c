@@ -2,7 +2,7 @@ Source: asn1c
 Section: devel
 Priority: optional
 Maintainer: Eugene Seliverstov <theirix@gmail.com>
-Build-Depends: debhelper (>= 13.0.0), debhelper-compat (= 13), flex
+Build-Depends: debhelper-compat (= 13), flex
 Build-Depends-Indep: texlive, texlive-xetex, texlive-luatex, texlive-fonts-extra, texlive-science, lmodern
 Standards-Version: 4.6.1
 Homepage: https://github.com/vlm/asn1c
