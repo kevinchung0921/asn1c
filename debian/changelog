@@ -1,8 +1,24 @@
-asn1c (0.9.28+dfsg-4) UNRELEASED; urgency=medium
+asn1c (0.9.28+dfsg-4) unstable; urgency=medium
 
-  * Bump version UNRELEASED
+  * Add DFSG-clean sources to upstream branch
+  * Fix FTBFS on GCC 12 (closes: #1012896)
+  * Fix copyright insecure URL
+  * Sync debian copyright year
+  * Add Files-Excluded to explain removed non-dfsg files
+  * Clean whitespaces in changelog
+  * Switch to uscan-based repacking
+  * Add upstream/metadata file
+  * Move additional documentation to asn1c-doc
+  * Mark not-installed doc files
+  * Add lintian override for non-doc README files
+  * Switch to compat level 13
+  * Update Standards-Version to 4.6.1
+  * Add Forwarded status for some patches
+  * Enable hardening
+  * Bump new version
+  * Use only debhelper-compat
 
- -- Eugene Seliverstov <theirix@gmail.com>  Mon, 25 Jul 2022 14:14:10 +0300
+ -- Eugene Seliverstov <theirix@gmail.com>  Thu, 28 Jul 2022 18:15:19 +0000
 
 asn1c (0.9.28+dfsg-3) unstable; urgency=medium
 
