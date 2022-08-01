@@ -12,7 +12,8 @@ Vcs-Browser: https://salsa.debian.org/theirix-guest/asn1c
 Package: asn1c
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Recommends: asn1c-doc (>= 0.9.27+dfsg-2)
+Recommends: asn1c-doc (>= 0.9.28+dfsg-5)
+Breaks: asn1c-doc (<< 0.9.28+dfsg-5)
 Description: ASN.1 compiler for C
  This ASN.1 compiler turns the formal ASN.1 specifications into the C
  code. The compiler is shipped together with conformant BER/DER/XER
@@ -23,8 +24,8 @@ Section: doc
 Architecture: all
 Multi-Arch: foreign
 Depends: ${misc:Depends}
-Replaces: asn1c (<< 0.9.27+dfsg-2)
-Breaks: asn1c (<< 0.9.27+dfsg-2)
+Replaces: asn1c (<< 0.9.28+dfsg-5)
+Breaks: asn1c (<< 0.9.28+dfsg-5)
 Description: Documentation for asn1c
  This ASN.1 compiler turns the formal ASN.1 specifications into the C
  code. The compiler is shipped together with conformant BER/DER/XER
