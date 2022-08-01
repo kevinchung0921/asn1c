@@ -1,3 +1,9 @@
+asn1c (0.9.28+dfsg-5) unstable; urgency=medium
+
+  * Update package transitions (closes: #1016385)
+
+ -- Eugene Seliverstov <theirix@gmail.com>  Mon, 01 Aug 2022 09:49:37 +0000
+
 asn1c (0.9.28+dfsg-4) unstable; urgency=medium
 
   * Add DFSG-clean sources to upstream branch
