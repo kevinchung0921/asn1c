@@ -7,3 +7,4 @@
 12_mistype.patch
 13_checkreal.patch
 14_undefstrtoent.diff
+add_testing_script

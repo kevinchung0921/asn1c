@@ -1,0 +1,28 @@
+Description: Add testing script
+ Add testing script and install it to usr/bin. Also prompt 
+ test message during install.
+ .
+ asn1c (0.9.28+dfsg-5ubuntu1) UNRELEASED; urgency=low
+ .
+   * Add testing.sh and echo message during package installation
+Author: Kevin Chung <kevinchung0921@gmail.com>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: https://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: 2023-03-31
+
+--- /dev/null
++++ asn1c-0.9.28+dfsg/testing.sh
+@@ -0,0 +1,3 @@
++#!/bin/sh
++set -e
++echo "this is a test from Kevin Chung" >&2
